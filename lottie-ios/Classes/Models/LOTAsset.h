@@ -25,6 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly, nullable) NSString *referenceID;
 @property (nonatomic, readonly, nullable) NSNumber *assetWidth;
 @property (nonatomic, readonly, nullable) NSNumber *assetHeight;
+@property (nonatomic, readonly, nullable) NSNumber *isRemote;
 
 @property (nonatomic, readonly, nullable) NSString *imageName;
 @property (nonatomic, readonly, nullable) NSString *imageDirectory;

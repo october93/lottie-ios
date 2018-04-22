@@ -142,6 +142,9 @@
 - (void)_setImageForAsset:(LOTAsset *)asset {
   if (asset.imageName) {
     UIImage *image;
+    if (asset.isRemote > 0) {
+      image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", asset.imageDirectory, asset.imageName]]]];
+    }
     if (asset.rootDirectory.length > 0) {
       NSString *rootDirectory  = asset.rootDirectory;
       if (asset.imageDirectory.length > 0) {

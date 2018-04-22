@@ -35,6 +35,10 @@
   if (jsonDictionary[@"w"]) {
     _assetWidth = [jsonDictionary[@"w"] copy];
   }
+    
+  if (jsonDictionary[@"r"]) {
+    _isRemote = [jsonDictionary[@"r"] copy];
+  }
   
   if (jsonDictionary[@"h"]) {
     _assetHeight = [jsonDictionary[@"h"] copy];
