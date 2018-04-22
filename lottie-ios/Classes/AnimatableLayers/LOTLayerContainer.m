@@ -144,8 +144,7 @@
     UIImage *image;
     if (asset.isRemote > 0) {
       image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", asset.imageDirectory, asset.imageName]]]];
-    }
-    if (asset.rootDirectory.length > 0) {
+    } else if (asset.rootDirectory.length > 0) {
       NSString *rootDirectory  = asset.rootDirectory;
       if (asset.imageDirectory.length > 0) {
         rootDirectory = [rootDirectory stringByAppendingPathComponent:asset.imageDirectory];
